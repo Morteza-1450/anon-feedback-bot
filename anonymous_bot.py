@@ -2,8 +2,9 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, MessageHandler, filters, ContextTypes
 import os
 
-BOT_TOKEN = 7506176190:AAGGSlTLmh3yIfDdobP7PxY133RmRJ9nTOc
-ADMIN_CHAT_ID = 94919814
+# دریافت توکن و آی‌دی از متغیرهای محیطی
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+ADMIN_CHAT_ID = int(os.getenv("ADMIN_CHAT_ID"))
 
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     msg = update.message.text
