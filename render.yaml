@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: anonymous-feedback-bot
+    env: python
+    plan: free
+    buildCommand: ""
+    startCommand: bash start.sh
+    envVars:
+      - key: BOT_TOKEN
+        value: "توکن_تو"
+      - key: ADMIN_CHAT_ID
+        value: "آی‌دی_تلگرام_تو"
